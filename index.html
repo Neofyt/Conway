@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+	<meta charset='UTF-8' />
+	
+	<title>Conway</title>
+
+	<link rel='stylesheet' href='css/style.css' />
+	
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='js/conway.js'></script>
+</head>
+
+<body>
+
+	<div id="page-wrap">
+	
+		<h1>Conway's Game of life</h1>
+		<p>Use the cursor to draw shapes then click Start...</p>
+	
+		<div id="table-wrap">
+			<table>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<br />
+
+		<button onclick="start();">Start</button>
+		<button onclick="stop();">Stop</button>
+		<button onclick="reset();">Reset</button>
+		<span>Generations : <span id="generations">0</span></span>
+
+		<br /><br />
+		<span>Grid size :</span>
+		<!-- buildGrid(this.value.split(',')[0],this.value.split(',')[1]) -->
+		<select size="1" onChange="buildGrid(this.value,this.value)">
+			<option value="30">30x30</option> 
+			<option value="40">40x40</option> 
+			<option value="50">50x50</option> 
+		</select>
+
+		<br /><br />
+
+		<p>Ressources : <a href="http://conwaylife.com/">ConwayLife.com</a> and <a href="http://en.wikipedia.org/wiki/Conway's_Game_of_Life">Wikipedia article</a> ...</p>
+	</div>
+	
+</body>
+
+</html>
